@@ -1,0 +1,31 @@
+Adv. components features and concepts
+host element
+components lifecycle
+components views & content
+
+_______________________
+
+ * ng-content - select & ngProjectAs - multiple selectors
+
+ * ng-content - fallbacks - use this tag as wrapper tag - so inside content act as fallback content
+
+ * viewEncapsulation - determines how styles defined in a component affect the DOM—specifically, whether they apply only to that component or can "leak" out to other parts of the application.
+
+ * host element - each component has host element, the host element refers to the DOM element that represents the component in the parent’s template. example :header has app-header which is host - You can listen to events or bind properties using the @HostBinding and @HostListener decorators
+ example :
+ host:{
+    class:'name'
+ }
+  @HostBinding('class.active') isActive = true;
+@HostListener('click') onClick() {
+  console.log('Host element clicked!');
+}
+Accessing host elements :
+constructor(private el: ElementRef) {
+  console.log(this.el.nativeElement); // the host DOM element
+}
+
+ * 
+
+
+  

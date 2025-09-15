@@ -1,0 +1,15 @@
+<div>
+  <a [routerLink]="['/users',user().id]" routerLinkActive="select" >
+  <!-- <a routerLink="/tasks"> -->
+    <img [src]="imagePath()" [alt]="user().name" />
+    <span>{{ user().name }}</span>
+  </a>
+</div>
+
+
+<!-- 
+  <a href="/tasks">
+    u can use this to navigate -> but whole app loads up
+
+    routerLinkActive -> css class
+-->
