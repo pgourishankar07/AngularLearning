@@ -1,0 +1,16 @@
+<app-card>
+  <article>
+    <h2>{{ task.title }}</h2>
+    <time datetime="">{{ task.dueDate | date}}</time>
+    <p>{{ task.summary }}</p>
+    <p class="actions">
+      <button (click)="onCompleteTask()">Complete</button>
+    </p>
+  </article>
+</app-card>
+
+<!-- 
+{{ task.dueDate | date}} -> this is data piping |
+ and 'date' is keyword from DatePipe class from angular 
+ u can also format this date more by refering the angular reference from google.com
+-->
